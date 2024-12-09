@@ -39,29 +39,29 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Professional Experience</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Professional Experience</h2>
         
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {experiences.map((exp, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
+                  <h3 className="text-2xl font-semibold text-gray-900">{exp.title}</h3>
                   <p className="text-lg text-blue-600">{exp.company}</p>
                 </div>
                 <div className="flex flex-col md:items-end mt-2 md:mt-0">
                   <div className="flex items-center text-gray-600 mb-1">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span>{exp.period}</span>
+                    <Calendar className="w-5 h-5 mr-2" />
+                    <span className="text-sm">{exp.period}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span>{exp.location}</span>
+                    <MapPin className="w-5 h-5 mr-2" />
+                    <span className="text-sm">{exp.location}</span>
                   </div>
                 </div>
               </div>
@@ -69,8 +69,8 @@ const Experience = () => {
               <ul className="space-y-2">
                 {exp.description.map((item, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 shrink-0"></span>
-                    <span className="text-gray-600">{item}</span>
+                    <span className="inline-block w-3 h-3 bg-blue-600 rounded-full mt-2 mr-3 shrink-0"></span>
+                    <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
